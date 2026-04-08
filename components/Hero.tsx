@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 const Hero = () => {
     return (
@@ -49,17 +48,35 @@ const Hero = () => {
 
                     <div className="order-1 lg:order-2 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 ease-[cubic-bezier(0.32,0.72,0,1)]">
                         <div className="relative lg:pl-8">
-                            <div className="p-2 bg-white rounded-4xl shadow-[0_2px_40px_-12px_rgba(0,0,0,0.08)] ring-1 ring-zinc-100">
-                                <div className="relative overflow-hidden rounded-3xl bg-zinc-100 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)]">
-                                    <Image
-                                        width={600}
-                                        height={450}
-                                        src="/img/hero.jpg"
-                                        alt="Comunidad compartiendo momentos"
-                                        className="w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover"
-                                        priority
-                                    />
-                                    <div className="absolute inset-0 bg-linear-to-t from-zinc-900/10 via-transparent to-transparent" />
+                            {/* Ambient glow orbs - Soft Structuralism */}
+                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-zinc-200/40 rounded-full blur-3xl" />
+                            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-100/50 rounded-full blur-3xl" />
+
+                            {/* Double-Bezel: Outer Shell */}
+                            <div className="p-2 bg-white rounded-lg shadow-[0_2px_40px_-12px_rgba(0,0,0,0.08)] ring-1 ring-black/5">
+                                {/* Double-Bezel: Inner Core */}
+                                <div
+                                    className="relative overflow-hidden bg-zinc-100 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]"
+                                    style={{ borderRadius: 'calc(2rem - 0.5rem)' }}
+                                >
+                                    {/* <svg width="0" height="0" className="absolute">
+                                        <defs>
+                                            <clipPath id="heroRoundedShape" clipPathUnits="objectBoundingBox">
+                                                <path d="M0.03,0 H0.73 Q0.75,0 0.75,0.03 L0.78,0.05 Q0.80,0.06 0.82,0.06 H0.97 Q1,0.06 1,0.09 V0.83 Q1,0.86 0.97,0.88 L0.93,0.97 Q0.91,1 0.88,1 H0.15 Q0.12,1 0.10,0.97 L0.08,0.95 Q0.06,0.94 0.06,0.94 H0.03 Q0,0.94 0,0.91 V0.03 Q0,0 0.03,0 Z" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg> */}
+                                    <div style={{ clipPath: 'url(#heroRoundedShape)' }}>
+                                        <Image
+                                            width={600}
+                                            height={450}
+                                            src="/img/hero.jpg"
+                                            alt="Comunidad compartiendo momentos"
+                                            className="w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover"
+                                            priority
+                                        />
+                                    </div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-zinc-900/10 via-transparent to-transparent pointer-events-none" />
                                 </div>
                             </div>
 
