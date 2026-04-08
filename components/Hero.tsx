@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Hero = () => {
     return (
-        <section className="min-h-dvh flex items-center relative overflow-hidden bg-[#FAFAFA] py-10">
+        <section className="min-h-dvh flex items-center relative overflow-hidden bg-linear-to-b from-amber-100 to-stone-50">
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     <div className="space-y-10 order-2 lg:order-1">
@@ -49,11 +49,11 @@ const Hero = () => {
                     <div className="order-1 lg:order-2 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 ease-[cubic-bezier(0.32,0.72,0,1)]">
                         <div className="relative lg:pl-8">
                             {/* Ambient glow orbs - Soft Structuralism */}
-                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-zinc-200/40 rounded-full blur-3xl" />
-                            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-100/50 rounded-full blur-3xl" />
+                            {/* <div className="absolute -top-6 -right-6 w-32 h-32 bg-zinc-200/40 rounded-full blur-3xl" /> */}
+                            {/* <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-100/50 rounded-full blur-3xl" /> */}
 
                             {/* Double-Bezel: Outer Shell */}
-                            <div className="p-2 bg-white rounded-lg shadow-[0_2px_40px_-12px_rgba(0,0,0,0.08)] ring-1 ring-black/5">
+                            <div className="p-2 bg-conic from-amber-200 via-amber-100 to-amber-200 rounded-4xl shadow-[0_2px_40px_-12px_rgba(0,0,0,0.08)] ring-1 ring-black/5">
                                 {/* Double-Bezel: Inner Core */}
                                 <div
                                     className="relative overflow-hidden bg-zinc-100 shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)]"
@@ -67,29 +67,32 @@ const Hero = () => {
                                         </defs>
                                     </svg> */}
                                     <div style={{ clipPath: 'url(#heroRoundedShape)' }}>
-                                        <Image
+                                        {/* <Image
                                             width={600}
                                             height={450}
-                                            src="/img/hero.jpg"
+                                            // src="https://cdn.cosmos.so/a2cc3bd8-2983-4046-b175-b55437b87b7e"
+                                            src="https://cdn.cosmos.so/a2cc3bd8-2983-4046-b175-b55437b87b7e"
                                             alt="Comunidad compartiendo momentos"
                                             className="w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover"
                                             priority
-                                        />
+                                        /> */}
+
+                                        <video src="https://cdn.cosmos.so/a58329ab-bf40-4b68-941a-649ab1a00def.mp4" autoPlay loop muted className="w-full h-[320px] sm:h-[380px] lg:h-[420px] object-cover"></video>
                                     </div>
                                     <div className="absolute inset-0 bg-linear-to-t from-zinc-900/10 via-transparent to-transparent pointer-events-none" />
                                 </div>
                             </div>
 
-                            <div className="absolute -bottom-4 -left-4 lg:-left-8 p-3 bg-white/90 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] ring-1 ring-zinc-100/50 animate-in fade-in zoom-in-95 duration-700 delay-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                            <div className="absolute -bottom-4 -left-4 lg:-left-8 p-3 bg-zinc-950/20 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_-8px_rgba(0,0,0,0.12)] ring-1 ring-amber-100/30 animate-in fade-in zoom-in-95 duration-700 delay-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
                                 <div className="flex items-center gap-3 px-4 py-3">
                                     <div className="flex -space-x-2">
                                         <div className="h-9 w-9 rounded-full bg-linear-to-br from-amber-300 to-orange-400 ring-2 ring-white" />
                                         <div className="h-9 w-9 rounded-full bg-linear-to-br from-emerald-300 to-teal-400 ring-2 ring-white" />
                                         <div className="h-9 w-9 rounded-full bg-linear-to-br from-violet-300 to-purple-400 ring-2 ring-white" />
                                     </div>
-                                    <div className="text-sm">
-                                        <p className="font-semibold text-zinc-900">+12k miembros</p>
-                                        <p className="text-zinc-500 text-xs">se unieron este mes</p>
+                                    <div className="text-sm mix-blend-difference">
+                                        <p className="font-semibold text-white">+12k miembros</p>
+                                        <p className="text-white text-xs">se unieron este mes</p>
                                     </div>
                                 </div>
                             </div>
