@@ -4,7 +4,20 @@ const nextConfig: NextConfig = {
   /* config options here */
   typedRoutes: true,
   images: {
-    domains: ['www.cosmos.so', 'cosmos.so', 'cdn.cosmos.so'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.cosmos.so',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cosmos.so',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.cosmos.so',
+      },
+    ],
   },
 };
 

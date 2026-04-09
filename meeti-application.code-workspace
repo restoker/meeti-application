@@ -1,6 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "ui-blocks",
+			"path": "../../../templates react/tailwindui 14:01:26/adamwathanss-tuibeta/react/ui-blocks"
+		},
+		{
+			"name": "meeti-application",
 			"path": "."
 		}
 	],
