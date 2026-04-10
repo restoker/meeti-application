@@ -15,7 +15,7 @@ export default function RegisterPage() {
     return (
         <>
             <div className='relative flex h-auto min-h-screen items-center justify-center overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8'>
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/239de491-9008-45e5-94fa-ae2059ac519c')] bg-cover bg-center hover:mix-blend-difference">
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/239de491-9008-45e5-94fa-ae2059ac519c')] bg-cover bg-center">
                     {/* <AuthBackgroundShape /> */}
 
                 </div>
