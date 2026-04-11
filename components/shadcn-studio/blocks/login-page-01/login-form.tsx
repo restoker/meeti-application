@@ -45,7 +45,7 @@ const LoginForm = () => {
       <div className='flex items-center justify-between gap-y-2'>
         <div className='flex items-center gap-3'>
           <Checkbox id='rememberMe' className='size-6' />
-          <Label htmlFor='rememberMe' className='text-muted-foreground'>
+          <Label htmlFor='rememberMe' className='text-zinc-950'>
             {' '}
             Remember Me
           </Label>

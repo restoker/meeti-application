@@ -83,7 +83,7 @@ const RegisterForm = () => {
       <div className='flex items-center gap-3'>
         <Checkbox id='rememberMe' className='size-6' />
         <Label htmlFor='rememberMe'>
-          <span className='text-muted-foreground'>I agree to</span> <a href='#'>privacy policy & terms</a>
+          <span className='text-zinc-950'>I agree to</span> <a href='#'>privacy policy & terms</a>
         </Label>
       </div>
 

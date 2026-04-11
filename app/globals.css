@@ -31,9 +31,9 @@
 
 @theme inline {
 
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-outfit);
 
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-outfit);
 
   --color-sidebar-ring: var(--sidebar-ring);
 

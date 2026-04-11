@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Iniciar Sesión"
@@ -15,30 +16,33 @@ export default function LoginPage() {
     return (
         <div>
             <div className='relative flex h-auto min-h-screen items-center justify-center overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8'>
-                <div className='absolute'>
-                    <AuthBackgroundShape />
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/8fc836dc-563a-4c27-9294-91c1e35c19b3?format=jpeg')] bg-cover bg-center">
+                    {/* <video src=""></video> */}
+                    {/* <AuthBackgroundShape /> */}
                 </div>
 
-                <Card className='z-1 w-full border-none shadow-md sm:max-w-lg'>
+                <Card className='z-1 w-full border-none shadow-md sm:max-w-lg bg-white/20 backdrop-blur-3xl'>
                     <CardHeader className='gap-6'>
-                        <Image
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            src="/img/logo.svg"
-                            alt="Logo"
-                            className="h-12 w-auto"
-                        />
+                        <Link href="/">
+                            <Image
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                src="/img/logo.svg"
+                                alt="Logo"
+                                className="h-12 w-auto"
+                            />
+                        </Link>
                         <div>
-                            <CardTitle className='mb-1.5 text-2xl'>Sign in to Shadcn Studio</CardTitle>
-                            <CardDescription className='text-base'>Ship Faster and Focus on Growth.</CardDescription>
+                            <CardTitle className='mb-1.5 text-2xl text-white font-bold'>Sign in to Meeti</CardTitle>
+                            <CardDescription className='text-base text-white'>Ship Faster and Focus on Growth.</CardDescription>
                         </div>
                     </CardHeader>
 
                     <CardContent>
-                        <p className='text-muted-foreground mb-6'>
+                        <p className='text-white mb-6'>
                             Login with{' '}
-                            <a href='#' className='text-card-foreground hover:underline'>
+                            <a href='#' className='text-white hover:underline'>
                                 Magic Link
                             </a>
                         </p>
@@ -57,11 +61,11 @@ export default function LoginPage() {
                         <div className='space-y-4'>
                             <LoginForm />
 
-                            <p className='text-muted-foreground text-center'>
+                            <p className='text-white text-center'>
                                 New on our platform?{' '}
-                                <a href='#' className='text-card-foreground hover:underline'>
+                                <Link href='/register' className='text-amber-400 hover:underline'>
                                     Create an account
-                                </a>
+                                </Link>
                             </p>
 
                             <div className='flex items-center gap-4'>

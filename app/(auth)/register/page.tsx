@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Crear Cuenta"
@@ -15,24 +16,26 @@ export default function RegisterPage() {
     return (
         <>
             <div className='relative flex h-auto min-h-screen items-center justify-center overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8'>
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/239de491-9008-45e5-94fa-ae2059ac519c')] bg-cover bg-center">
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/c439de9e-3668-49b4-a815-a06e14b5b760?format=jpeg')] bg-cover bg-center">
                     {/* <AuthBackgroundShape /> */}
 
                 </div>
 
                 <Card className='z-1 w-full border-none shadow-md sm:max-w-lg bg-white/20 backdrop-blur-3xl'>
                     <CardHeader className='gap-6'>
-                        <Image
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            src="/img/logo.svg"
-                            alt="Logo"
-                            className="h-12 w-auto"
-                        />
+                        <Link href="/">
+                            <Image
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                src="/img/logo.svg"
+                                alt="Logo"
+                                className="h-12 w-auto"
+                            />
+                        </Link>
                         <div>
-                            <CardTitle className='mb-1.5 text-2xl'>Sign Up to Meeti</CardTitle>
-                            <CardDescription className='text-base'>Create your account to get started.</CardDescription>
+                            <CardTitle className='mb-1.5 text-2xl text-white font-bold'>Sign Up to Meeti</CardTitle>
+                            <CardDescription className='text-base text-white'>Create your account to get started.</CardDescription>
                         </div>
                     </CardHeader>
 
@@ -43,9 +46,9 @@ export default function RegisterPage() {
 
                             <p className='text-center text-white'>
                                 Already have an account?{' '}
-                                <a href='#' className='text-white hover:underline'>
+                                <Link href='/login' className='text-zinc-950 hover:underline'>
                                     Sign in instead
-                                </a>
+                                </Link>
                             </p>
 
                             <div className='flex items-center gap-4'>
