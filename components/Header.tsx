@@ -6,7 +6,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
-const navigation = [
+const navigation: { name: string; href: string }[] = [
     { name: 'Product', href: '/product' },
     { name: 'Features', href: '/features' },
     { name: 'Marketplace', href: '/marketplace' },
@@ -16,22 +16,27 @@ const navigation = [
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
     return (
         <header className="sticky inset-x-0 top-0 z-50 bg-white/5 backdrop-blur-2xl">
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img
+                        <Image
+                            width={0}
+                            height={0}
+                            sizes='100vw'
                             alt=""
                             src="/img/logo.svg"
-                            className="h-8 w-auto dark:hidden"
+                            className="h-8 w-auto dark:hidden invert"
                         />
-                        <img
+                        <Image
+                            width={0}
+                            height={0}
+                            sizes='100vw'
                             alt=""
                             src="/img/logo.svg"
-                            className="h-8 w-auto not-dark:hidden"
+                            className="h-8 w-auto not-dark:hidden invert"
                         />
                     </Link>
                 </div>
@@ -70,7 +75,7 @@ const Header = () => {
                                 sizes='100vw'
                                 alt=""
                                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                className="h-8 w-auto dark:hidden"
+                                className="h-8 w-auto dark:hidden inver"
                             />
                             <Image
                                 height={0}
@@ -78,7 +83,7 @@ const Header = () => {
                                 sizes='100vw'
                                 alt=""
                                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                className="h-8 w-auto not-dark:hidden"
+                                className="h-8 w-auto not-dark:hidden inver"
                             />
                         </a>
                         <button
@@ -96,7 +101,7 @@ const Header = () => {
                                 {navigation.map((item) => (
                                     <Link
                                         key={item.name}
-                                        href={item.href}
+                                        href={{ pathname: item.href, query: { sort: 'asc' } }}
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
                                     >
                                         {item.name}

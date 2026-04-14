@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const Logo = () => {
+const Logo = ({ className }: { className?: string }) => {
     return (
         <>
             <Link href="/">
@@ -11,7 +11,7 @@ const Logo = () => {
                     sizes="100vw"
                     src="/img/logo.svg"
                     alt="Logo"
-                    className="h-12 w-auto"
+                    className={`h-12 w-auto ${className}`}
                 />
             </Link>
         </>

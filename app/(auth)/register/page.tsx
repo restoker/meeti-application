@@ -21,7 +21,7 @@ export default function RegisterPage() {
 
                 <Card className='z-1 w-full border-none shadow-md sm:max-w-lg bg-white/5 backdrop-blur-3xl'>
                     <CardHeader className='gap-6'>
-                        <Logo />
+                        <Logo className="invert" />
                         <div>
                             <CardTitle className='mb-1.5 text-2xl text-white font-bold'>Sign Up to Meeti</CardTitle>
                             <CardDescription className='text-base text-white'>Create your account to get started.</CardDescription>
