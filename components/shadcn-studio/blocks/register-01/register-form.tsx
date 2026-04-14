@@ -17,7 +17,7 @@ const RegisterForm = () => {
     <form className='space-y-4' onSubmit={e => e.preventDefault()}>
       {/* Username */}
       <div className='space-y-1'>
-        <Label className='leading-5' htmlFor='username'>
+        <Label className='leading-5 text-white' htmlFor='username'>
           Username*
         </Label>
         <Input type='text' id='username' placeholder='Enter your username' />
@@ -25,7 +25,7 @@ const RegisterForm = () => {
 
       {/* Email */}
       <div className='space-y-1'>
-        <Label className='leading-5' htmlFor='userEmail'>
+        <Label className='leading-5 text-white' htmlFor='userEmail'>
           Email address*
         </Label>
         <Input type='email' id='userEmail' placeholder='Enter your email address' />
@@ -33,7 +33,7 @@ const RegisterForm = () => {
 
       {/* Password */}
       <div className='w-full space-y-1'>
-        <Label className='leading-5' htmlFor='password'>
+        <Label className='leading-5 text-white' htmlFor='password'>
           Password*
         </Label>
         <div className='relative'>
@@ -57,7 +57,7 @@ const RegisterForm = () => {
 
       {/* Confirm Password */}
       <div className='w-full space-y-1'>
-        <Label className='leading-5' htmlFor='confirmPassword'>
+        <Label className='leading-5 text-white' htmlFor='confirmPassword'>
           Confirm Password*
         </Label>
         <div className='relative'>
@@ -83,12 +83,12 @@ const RegisterForm = () => {
       <div className='flex items-center gap-3'>
         <Checkbox id='rememberMe' className='size-6' />
         <Label htmlFor='rememberMe'>
-          <span className='text-zinc-950'>I agree to</span> <a href='#'>privacy policy & terms</a>
+          <span className='text-zinc-50'>I agree to</span> <a href='#' className='text-amber-400'>privacy policy & terms</a>
         </Label>
       </div>
 
       <Button className='w-full' type='submit'>
-        Sign Up to Shadcn Studio
+        Sign Up to Meeti
       </Button>
     </form>
   )

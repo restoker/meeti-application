@@ -1,5 +1,6 @@
 
 import AuthBackgroundShape from "@/assets/svg/auth-background-shape";
+import Logo from "@/components/Logo";
 import LoginForm from "@/components/shadcn-studio/blocks/login-page-01/login-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,23 +17,14 @@ export default function LoginPage() {
     return (
         <div>
             <div className='relative flex h-auto min-h-screen items-center justify-center overflow-x-hidden px-4 py-10 sm:px-6 lg:px-8'>
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://cdn.cosmos.so/8fc836dc-563a-4c27-9294-91c1e35c19b3?format=jpeg')] bg-cover bg-center">
+                <div className="absolute top-0 left-0 w-full h-full bg-[url('/img/bg2.png')] bg-cover bg-center">
                     {/* <video src=""></video> */}
                     {/* <AuthBackgroundShape /> */}
                 </div>
 
-                <Card className='z-1 w-full border-none shadow-md sm:max-w-lg bg-white/20 backdrop-blur-3xl'>
+                <Card className='z-1 w-full border-none shadow-md sm:max-w-lg bg-white/5 backdrop-blur-3xl'>
                     <CardHeader className='gap-6'>
-                        <Link href="/">
-                            <Image
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                src="/img/logo.svg"
-                                alt="Logo"
-                                className="h-12 w-auto"
-                            />
-                        </Link>
+                        <Logo />
                         <div>
                             <CardTitle className='mb-1.5 text-2xl text-white font-bold'>Sign in to Meeti</CardTitle>
                             <CardDescription className='text-base text-white'>Ship Faster and Focus on Growth.</CardDescription>
@@ -70,12 +62,12 @@ export default function LoginPage() {
 
                             <div className='flex items-center gap-4'>
                                 <Separator className='flex-1' />
-                                <p>or</p>
+                                <p className="text-amber-300">or</p>
                                 <Separator className='flex-1' />
                             </div>
 
                             <Button variant='ghost' className='w-full' asChild>
-                                <a href='#'>Sign in with google</a>
+                                <a className="text-amber-300" href='#'>Sign in with google</a>
                             </Button>
                         </div>
                     </CardContent>
