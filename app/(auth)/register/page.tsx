@@ -4,11 +4,13 @@ import RegisterForm from "@/components/shadcn-studio/blocks/register-01/register
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { generatePageTitle } from "@/lib/metadata";
+import { generateKey } from "crypto";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Crear Cuenta"
+    title: generatePageTitle("Create Account")
 }
 
 export default function RegisterPage() {

@@ -8,9 +8,10 @@ import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { generatePageTitle } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-    title: "Iniciar Sesión"
+    title: generatePageTitle("Sign In")
 }
 
 export default function LoginPage() {
