@@ -9,7 +9,7 @@ const ForgotPasswordForm = () => {
     <form className='space-y-4' onSubmit={e => e.preventDefault()}>
       {/* Email */}
       <div className='space-y-1'>
-        <Label className='leading-5 text-white' htmlFor='userEmail'>
+        <Label className='leading-5' htmlFor='userEmail'>
           Email address*
         </Label>
         <Input type='email' id='userEmail' placeholder='Enter your email address' />
